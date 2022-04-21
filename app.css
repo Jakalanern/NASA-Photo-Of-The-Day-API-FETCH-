@@ -1,0 +1,103 @@
+:root {
+  --clr-black: rgba(0, 0, 0, 0.815);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(247, 247, 247);
+  font-family: "Roboto", sans-serif;
+  margin: 4em 0em;
+}
+
+.date {
+  margin-top: 2em;
+  margin-bottom: 0.25em;
+}
+
+.head {
+  margin-bottom: 2em;
+}
+
+.image-container {
+  position: relative;
+  width: 90%;
+  cursor: pointer;
+}
+
+.potd {
+  display: block;
+  width: 100%;
+  border-radius: 0.25em;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #000000d3;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: height 0.33s, border 0s;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1em;
+  color: white;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.date {
+  border-bottom: 1px solid white;
+  text-align: center;
+}
+
+.text .title {
+  font-weight: 600;
+  font-size: 1.5vw;
+  border-bottom: 2px solid white;
+  padding-bottom: 0.15em;
+}
+
+.text .explanation {
+  font-weight: 400;
+  line-height: 1.75em;
+  font-size: 1vw;
+}
+
+.image-container:hover .overlay {
+  height: 100%;
+}
+
+.hyperlink {
+  text-decoration: none;
+  margin-top: 2em;
+}
+
+.hyperlink:hover {
+  text-decoration: underline;
+}
